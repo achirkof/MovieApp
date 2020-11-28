@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pg_rating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <View
+        android:id="@+id/v_pg_background"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/img_pg_rating_background"
+        android:alpha="0.9" />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="24dp"
+        android:layout_height="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_centerInParent="true"
+        android:text="@string/pg_age"
+        android:fontFamily="@font/roboto" />
+</RelativeLayout>
