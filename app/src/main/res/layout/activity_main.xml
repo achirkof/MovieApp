@@ -67,253 +67,141 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Back" />
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <include
+            android:id="@+id/pg_rating"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            layout="@layout/pg_rating"
             android:layout_marginTop="222dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/trailing_guide"
             app:layout_constraintStart_toEndOf="@id/leading_guide"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/leading_guide"
-                app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="40sp"
+            android:gravity="center_vertical"
+            android:text="@string/movie_name"
+            android:textColor="#ECECEC"
+            android:textFontWeight="900"
+            app:layout_constraintTop_toBottomOf="@id/pg_rating"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            tools:text="Avengers:\nEnd Game" />
 
-                <View
-                    android:id="@+id/v_pg_background"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:background="@drawable/img_pg_rating_background"
-                    android:alpha="0.9" />
+        <TextView
+            android:id="@+id/tv_movie_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="14sp"
+            android:textFontWeight="300"
+            android:gravity="center_vertical"
+            android:text="@string/tags"
+            android:textColor="@color/accent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            tools:text="Action, Adventure, Fantasy" />
 
-                <TextView
-                    android:id="@+id/some_id"
-                    android:layout_width="24dp"
-                    android:layout_height="16dp"
-                    android:textSize="12sp"
-                    android:textColor="@color/white"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:layout_centerInParent="true"
-                    android:text="@string/pg_age"
-                    android:fontFamily="@font/roboto"
-                    tools:text="13+" />
-            </RelativeLayout>
+        <include
+            layout="@layout/reviews_bar"
+            android:id="@+id/reviews_bar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_tags"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            tools:text="13+" />
 
-            <TextView
-                android:id="@+id/tv_movie_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/roboto"
-                android:textSize="40sp"
-                android:gravity="center_vertical"
-                android:text="@string/movie_name"
-                android:textColor="#ECECEC"
-                android:textFontWeight="900"
-                tools:text="Avengers:\nEnd Game" />
+        <TextView
+            android:id="@+id/tv_storyline"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp"
+            android:textColor="#ECECEC"
+            android:gravity="center_vertical"
+            android:text="@string/storyline"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="900"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            app:layout_constraintTop_toBottomOf="@id/reviews_bar"
+            tools:text="Storyline" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto"
-                android:textSize="14sp"
-                android:textFontWeight="300"
-                android:gravity="center_vertical"
-                android:text="@string/tags"
-                android:textColor="@color/accent"
-                tools:text="Action, Adventure, Fantasy" />
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:text="@string/description"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="300"
+            android:lineSpacingExtra="4sp"
+            android:alpha="0.75"
+            android:paddingVertical="12dp"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            app:layout_constraintTop_toBottomOf="@id/tv_storyline"
+            tools:text="After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe." />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_cast"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp"
+            android:textColor="#ECECEC"
+            android:gravity="center_vertical"
+            android:text="@string/cast"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="900"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            app:layout_constraintTop_toBottomOf="@id/tv_description"
+            tools:text="Cast" />
 
-                <RatingBar
-                    android:id="@+id/rating"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:theme="@style/CustomRatingBar"
-                    android:layout_gravity="center_vertical"
-                    android:isIndicator="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="5"
-                    android:stepSize="1"
-                    android:rating="4" />
-
-                <TextView
-                    android:id="@+id/tv_reviews"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="9dp"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_vertical"
-                    android:text="@string/reviews"
-                    android:textColor="@color/text_secondary"
-                    android:textFontWeight="900"
-                    android:textSize="14sp"
-                    tools:text="125 REVIEWS" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_storyline"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginTop="24dp"
-                android:textSize="14sp"
-                android:textColor="#ECECEC"
-                android:gravity="center_vertical"
-                android:text="@string/storyline"
-                android:fontFamily="@font/roboto"
-                android:textFontWeight="900"
-                tools:text="Storyline" />
-
-            <TextView
-                android:id="@+id/tv_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:gravity="center_vertical"
-                android:text="@string/description"
-                android:fontFamily="@font/roboto"
-                android:textFontWeight="300"
-                android:lineSpacingExtra="4sp"
-                android:alpha="0.75"
-                android:paddingVertical="12dp"
-                tools:text="After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe." />
-
-            <TextView
-                android:id="@+id/tv_cast"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginTop="24dp"
-                android:textSize="14sp"
-                android:textColor="#ECECEC"
-                android:gravity="center_vertical"
-                android:text="@string/cast"
-                android:fontFamily="@font/roboto"
-                android:textFontWeight="900"
-                tools:text="Cast" />
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintStart_toEndOf="@id/leading_guide"
+            app:layout_constraintTop_toBottomOf="@id/tv_cast">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <include
+                    layout="@layout/card_actor"
+                    app:srcCompat="@drawable/ironman" />
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/ironman" />
+                <include
+                    layout="@layout/card_actor"
+                    app:srcCompat="@drawable/ironman" />
 
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:textSize="12sp"
-                        android:textColor="#D8D8D8"
-                        android:gravity="center_vertical"
-                        android:text="@string/actor1"
-                        android:fontFamily="@font/roboto"
-                        android:textFontWeight="900"
-                        android:lines="2"
-                        tools:text="Robert\nDowney Jr." />
+                <include
+                    layout="@layout/card_actor"
+                    app:srcCompat="@drawable/ironman" />
 
-                </LinearLayout>
+                <include
+                    layout="@layout/card_actor"
+                    app:srcCompat="@drawable/ironman" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:orientation="vertical">
+                <include
+                    layout="@layout/card_actor"
+                    app:srcCompat="@drawable/ironman" />
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/capitan" />
-
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:textSize="12sp"
-                        android:textColor="#D8D8D8"
-                        android:gravity="center_vertical"
-                        android:text="@string/actor2"
-                        android:fontFamily="@font/roboto"
-                        android:textFontWeight="900"
-                        android:lines="2"
-                        tools:text="Chris\nEvans" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/hulk" />
-
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:textSize="12sp"
-                        android:textColor="#D8D8D8"
-                        android:gravity="center_vertical"
-                        android:text="@string/actor3"
-                        android:fontFamily="@font/roboto"
-                        android:textFontWeight="900"
-                        android:lines="2"
-                        tools:text="Mark\nRuffalo" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/tor" />
-
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:textSize="12sp"
-                        android:textColor="#D8D8D8"
-                        android:gravity="center_vertical"
-                        android:text="@string/actor4"
-                        android:fontFamily="@font/roboto"
-                        android:textFontWeight="900"
-                        android:lines="2"
-                        tools:text="Chris\nHemsworth" />
-
-                </LinearLayout>
-
+                <include
+                    layout="@layout/card_actor"
+                    app:srcCompat="@drawable/ironman" />
             </LinearLayout>
+        </HorizontalScrollView>
 
-        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
