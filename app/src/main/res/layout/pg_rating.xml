@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/pg_rating"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
 
     <View
-        android:id="@+id/v_pg_background"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:background="@drawable/img_pg_rating_background"
-        android:alpha="0.9" />
+        android:background="@drawable/rounded_shape" />
 
     <TextView
         android:id="@+id/some_id"
