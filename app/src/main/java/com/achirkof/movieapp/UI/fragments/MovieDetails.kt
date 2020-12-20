@@ -1,4 +1,4 @@
-package com.achirkof.movieapp.UI
+package com.achirkof.movieapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +10,8 @@ import com.achirkof.movieapp.R
 class MovieDetails : Fragment() {
 
     companion object {
-        fun newInstance(): MovieList {
-            return newInstance()
+        fun newInstance(): MovieDetails {
+            return MovieDetails()
         }
     }
 

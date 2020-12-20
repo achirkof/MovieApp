@@ -1,153 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/movie_list_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
     android:theme="@style/Theme.MovieApp">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/leading_guide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movies_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/trailing_guide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="170dp"
-        android:layout_height="296dp"
-        app:cardBackgroundColor="@color/background"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toEndOf="@id/leading_guide"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/gradient_border"
-            android:orientation="vertical">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/movie_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="248dp"
-                android:padding="1dp"
-                android:scaleType="centerCrop"
-                app:shapeAppearanceOverlay="@style/circleImageViewStyle"
-                app:srcCompat="@drawable/avengers_cover"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="248dp"
-                android:layout_alignBottom="@id/movie_cover"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/img_cover_mask" />
-
-            <include
-                android:id="@+id/pg_rating"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                layout="@layout/pg_rating"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp" />
-
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="14dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginEnd="8dp"
-                android:layout_alignParentEnd="true"
-                app:srcCompat="@drawable/ic_like" />
-
-            <TextView
-                android:id="@+id/movie_tags"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/movie_cover"
-                android:layout_marginTop="214dp"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/roboto"
-                android:textSize="8sp"
-                android:textFontWeight="300"
-                android:gravity="center_vertical"
-                android:text="@string/tags"
-                android:textColor="@color/accent"
-                tools:text="Action, Adventure, Fantasy" />
-
-            <me.zhanghai.android.materialratingbar.MaterialRatingBar
-                android:id="@id/reviews_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:layout_below="@+id/movie_tags"
-                android:minHeight="10dp"
-                android:maxHeight="10dp"
-                android:isIndicator="true"
-                android:stepSize="1"
-                android:rating="4"
-                style="@style/CustomRatingBar" />
-
-            <TextView
-                android:id="@+id/tv_reviews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/reviews_bar"
-                android:layout_below="@id/movie_tags"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:layout_alignBaseline="@id/reviews_bar"
-                android:gravity="center_horizontal|center_vertical"
-                android:fontFamily="@font/roboto"
-                android:text="@string/reviews"
-                android:textColor="@color/text_secondary"
-                android:textFontWeight="900"
-                android:textSize="8sp"
-                tools:text="125 REVIEWS" />
-
-            <TextView
-                android:id="@+id/movie_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:fontFamily="@font/roboto"
-                android:textSize="14sp"
-                android:gravity="center_vertical"
-                android:text="@string/list_movie_name"
-                android:textColor="#ECECEC"
-                android:textFontWeight="900"
-                android:lineHeight="20sp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/movie_cover"
-                tools:text="Avengers: End Game" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_below="@id/movie_name"
-                android:fontFamily="@font/roboto"
-                android:textSize="8sp"
-                android:gravity="center_vertical"
-                android:text="@string/movie_length"
-                android:textColor="#565665"
-                android:textFontWeight="900"
-                tools:text="137 MIN" />
-        </RelativeLayout>
-
-    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

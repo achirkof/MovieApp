@@ -1,9 +1,10 @@
-package com.achirkof.movieapp
+package com.achirkof.movieapp.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.achirkof.movieapp.UI.MovieDetails
-import com.achirkof.movieapp.UI.MovieList
+import com.achirkof.movieapp.R
+import com.achirkof.movieapp.ui.fragments.MovieDetails
+import com.achirkof.movieapp.ui.fragments.MovieList
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
