@@ -20,7 +20,7 @@
         android:rating="4" />
 
     <TextView
-        android:id="@+id/tv_reviews"
+        android:id="@+id/tv_movie_list_reviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"

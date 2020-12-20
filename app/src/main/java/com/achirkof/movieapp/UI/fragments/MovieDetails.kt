@@ -1,4 +1,4 @@
-package com.achirkof.movieapp.UI
+package com.achirkof.movieapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,14 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.achirkof.movieapp.R
+import com.achirkof.movieapp.domain.entity.Movie
 
 class MovieDetails : Fragment() {
 
     companion object {
-        fun newInstance(): MovieList {
-            return newInstance()
+        fun newInstance(movie: Movie): MovieDetails {
+            return MovieDetails()
         }
     }
+
+    private lateinit var movie: Movie
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
