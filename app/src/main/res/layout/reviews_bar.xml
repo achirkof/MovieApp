@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/reviews_bar"
+<LinearLayout android:id="@+id/reviews_bar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RatingBar
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
         android:id="@+id/rating"
         style="?android:attr/ratingBarStyleSmall"
-        android:theme="@style/CustomRatingBar"
+        app:mrb_progressTint="@color/accent"
+        app:mrb_progressBackgroundTint="@color/text_secondary"
+        android:theme="@style/MovieRatingBar"
         android:layout_gravity="center_vertical"
         android:isIndicator="true"
         android:layout_width="wrap_content"
